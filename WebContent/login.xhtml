@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Home Page</title>
+	<link rel="stylesheet"
+		href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/form-elements.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.backstretch.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</h:head>
+<h:body>
+	<div class="top-content">
+
+		<div class="inner-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3 form-box">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3>Login</h3>
+								<p>Enter your username and password to log on:</p>
+							</div>
+							<div class="form-top-right">
+								<i class="fa fa-lock"></i>
+							</div>
+						</div>
+						<div class="form-bottom">
+							<h:form h:role="form" id="loginForm" class="login-form">
+								<div class="form-group">
+									<label class="sr-only" for="form-username">Username</label> 
+										<h:inputText h:placeholder="your name" id="inputName" class="form-username form-control" value="#{user.firstName}" />
+										
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-password">Password</label>
+									<h:inputSecret id="inputPassword" class="form-password form-control" value="#{user.password}" h:placeholder="Password..." />
+								</div>
+								<h:commandButton class="btn" value="Sign In" action="#{user.login}" />
+							</h:form>
+							<form h:role="form" action="register.xhtml" method="post" class="login-form">
+								<br />
+								<button type="submit" class="btn2">Not A User ?? Sign
+									up...!</button>
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Home Page</title>
+	<link rel="stylesheet"
+		href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/form-elements.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.backstretch.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</h:head>
+<h:body>
+	<div class="top-content">
+
+		<div class="inner-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3 form-box">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3>Register</h3>
+							</div>
+						</div>
+						<div class="form-bottom" style="padding-top: -200px;">
+							<h:form id="registerForm" class="register-form">
+								<div class="form-group">
+									<label class="sr-only" for="form-username">First Name</label> 
+										<div>First Name</div><h:inputText h:placeholder="your name" class="form-username form-control" id="fname" 
+										value="#{user.firstName}" required="true" requiredMessage="Please enter your first name" />
+										<h:message for="fname" style="color:red" />
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-username">Last Name</label> 
+										<div>Last Name</div><h:inputText h:placeholder="your name" class="form-username form-control" id="lname" 
+										value="#{user.lastName}" required="true" requiredMessage="Please enter your Last name" />
+										<h:message for="lname" style="color:red" />
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-username">Email</label> 
+										<div>Email</div><h:inputText h:placeholder="your email" class="form-username form-control" id="email" 
+										value="#{user.email}" required="true" requiredMessage="Please enter your Email" />
+										<h:message for="email" style="color:red" />
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="form-username">Password</label> 
+										<div>Password</div><h:inputSecret h:placeholder="your Password" class="form-username form-control" id="psw" 
+										value="#{user.password}" required="true" requiredMessage="Please enter your Password" />
+										<h:message for="psw" style="color:red" />
+								</div>
+								<h:commandButton class="btn" value="Register" action="#{user.add}" />
+							</h:form>
+							<form h:role="form" action="login.xhtml" method="post" class="login-form">
+								<br />
+								<button type="submit" class="btn2">Home</button>
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</h:body>
+</html>
